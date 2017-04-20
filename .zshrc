@@ -1,5 +1,5 @@
 # add the RIT default bashrc stuff
-source /usr/local/lib/config/Bash_Profile
+#source /usr/local/lib/config/Bash_Profile
 
 # Set up the prompt
 autoload -Uz promptinit
@@ -48,8 +48,8 @@ alias dir="ls -lash --color"
 alias cpu-time="time"
 alias time="date +"%r""
 
-# Last thing, needs to be zsh-syntax
-source ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Last thing, needs to be zsh-syntax (haven't decided if I will use this full time yet)
+#source ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
 
 # Change default editor
 export EDITOR=nano
