@@ -47,6 +47,7 @@ alias ls="ls -lash --color"
 alias dir="ls -lash --color"
 alias cpu-time="time"
 alias time="date +"%r""
+cld() {cd "$@" && ls -lash --color}
 
 # Last thing, needs to be zsh-syntax (haven't decided if I will use this full time yet)
 #source ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
