@@ -38,19 +38,18 @@ zstyle ':completion:*' verbose true
 
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+unsetopt nomatch
 
 # Shell customization
 export PROMPT='%{%F{cyan}%}%n%{%F{white}%}@%{%F{magenta}%}%m%{%F{white}%}:%~ %# '
 
-# Now, some personal aliases
+# Command aliases
 alias ls="ls -lash --color"
 alias dir="ls -lash --color"
 alias cpu-time="time"
 alias time="date +"%r""
-cld() {cd "$@" && ls -lash --color}
-
-# Last thing, needs to be zsh-syntax (haven't decided if I will use this full time yet)
-#source ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
+alias gdb="gdb -q"
+cld() { cd "$@" && ls -lash --color}
 
 # Change default editor
 export EDITOR=nano
