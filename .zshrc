@@ -44,7 +44,8 @@ unsetopt nomatch
 export PROMPT='%{%F{cyan}%}%n%{%F{white}%}@%{%F{magenta}%}%m%{%F{white}%}:%~ %# '
 
 # Command aliases
-alias ls="ls -lash --color"
+alias l="/bin/ls -aCF"
+alias ls="/bin/ls -lash --color"
 alias dir="ls -lash --color"
 alias cpu-time="time"
 alias time="date +"%r""
