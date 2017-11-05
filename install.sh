@@ -1,6 +1,6 @@
 #!/bin/bash
 # Move the config files to the home dir automatically
-mv -r .emacs.d ~
+cp -r .emacs.d ~
 mv .nanorc ~
 mv .zshrc ~
 
