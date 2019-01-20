@@ -5,5 +5,6 @@ git submodule update
 cp -r .emacs.d ~
 mv .nanorc ~
 mv .zshrc ~
+mv .config ~
 
 chsh -s /bin/zsh
