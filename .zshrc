@@ -1,6 +1,3 @@
-# add the RIT default bashrc stuff
-#source /usr/local/lib/config/Bash_Profile
-
 # Set up the prompt
 autoload -Uz promptinit
 autoload -U colors && colors
@@ -9,9 +6,9 @@ prompt off
 
 setopt histignorealldups
 
-# Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
-HISTSIZE=1000
-SAVEHIST=1000
+# Configure history settings
+HISTSIZE=9999
+SAVEHIST=9999
 HISTFILE=~/.zsh_history
 
 # Set zle bind mode to emacs, the most popular
@@ -46,11 +43,16 @@ export PROMPT='%{%F{cyan}%}%n%{%F{white}%}@%{%F{magenta}%}%m%{%F{white}%}:%~ %# 
 # Command aliases
 alias l="/bin/ls -aCF"
 alias ls="/bin/ls -lash --color"
-alias dir="ls -lash --color"
 alias cpu-time="time"
 alias time="date +"%r""
 alias gdb="gdb -q"
-cld() { cd "$@" && ls -lash --color}
+cld() { cd "$@" && ls -lash --color }
+incognito() { unset HISTFILE }
+alias strip-m="sed -i -e 's/\r//g'"
 
 # Change default editor
-export EDITOR=nano
+export EDITOR=micro
+export PATH=$PATH:$HOME/bin
+
+# Add support for X11 forwarding
+#export DISPLAY=127.0.0.1:0

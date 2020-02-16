@@ -1,0 +1,6 @@
+{
+    "Alt-/": "lua:comment.comment",
+    "CtrlU": "None",
+    "CtrlR": "ToggleMacro",
+    "Insert": "None"
+}
