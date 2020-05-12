@@ -38,7 +38,11 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 unsetopt nomatch
 
 # Shell customization
-export PROMPT='%{%F{cyan}%}%n%{%F{white}%}@%{%F{magenta}%}%m%{%F{white}%}:%~ %# '
+prompt_append=""
+if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ] || [ -n "$SSH_CONNECTION" ]; then
+    prompt_append="%{%F{green}%}r%{%F{white}%}+"
+fi
+export PROMPT=${prompt_append}'%{%F{cyan}%}%n%{%F{white}%}@%{%F{magenta}%}%m%{%F{white}%}:%~ %# '
 
 # Command aliases
 alias l="/bin/ls -aCF"
