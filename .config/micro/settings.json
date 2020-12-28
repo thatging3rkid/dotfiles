@@ -1,9 +1,18 @@
 {
+    "ft:css": {
+        "tabsize": 2
+    },
+    "ft:html": {
+        "tabsize": 2
+    },
     "ft:makefile": {
         "tabsize": 8,
         "tabstospaces": false
     },
     "ft:xml": {
+        "tabsize": 2
+    },
+    "ft:yaml": {
         "tabsize": 2
     },
     "tabmovement": false,
