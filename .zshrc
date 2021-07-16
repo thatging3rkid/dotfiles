@@ -50,13 +50,18 @@ alias ls="/bin/ls -lash --color"
 alias cpu-time="time"
 alias time="date +"%r""
 alias gdb="gdb -q"
+#alias less="/bin/less -Nr"
 cld() { cd "$@" && ls -lash --color }
 incognito() { unset HISTFILE }
 alias strip-m="sed -i -e 's/\r//g'"
+alias expand-tts="sed -i -e $'s/\t/    /g'"
+llss() { /bin/ls -lash --color=never "$@" | less }
 
 # Change default editor
 export EDITOR=micro
 export PATH=$PATH:$HOME/bin
 
 # Add support for X11 forwarding
-#export DISPLAY=127.0.0.1:0
+#export DISPLAY=127.0.0.1:0 # DISPLAY will be set by WM if physically logging in or by ssh if remoting (use -X)
+
+export LANG=en_US.UTF-8 # set language to english with UTF-8
